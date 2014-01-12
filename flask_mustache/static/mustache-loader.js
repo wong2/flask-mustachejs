@@ -43,8 +43,8 @@
             if (document.getElementById(domTemplateName)) {
                 // stupid hack to turn HTML-encoded templates into strings, see:
                 // http://stackoverflow.com/a/2419664/61435
-                cache[templateName] = $('<div />').html($.trim(
-                    $(document.getElementById(domTemplateName)).html())).text();
+                cache[templateName] = $.trim(
+                    $(document.getElementById(domTemplateName)).html());
             }
             else if (templates[hoganTemplateName]){
                 cache[templateName] = templates[hoganTemplateName];
